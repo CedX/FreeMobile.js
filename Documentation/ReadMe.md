@@ -36,7 +36,7 @@ try {
   console.log("The message was sent successfully.");
 }
 catch (error) {
-  const message = error instanceof Error ? error.message : String(error);
+  const message = Error.isError(error) ? error.message : String(error);
   console.error(`An error occurred: ${message}`);
 }
 ```

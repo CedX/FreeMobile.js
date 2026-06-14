@@ -8,5 +8,5 @@ try {
 	console.log("The message was sent successfully.");
 }
 catch (error) {
-	console.error(error instanceof SyntaxError ? error.message : error);
+	console.error(Error.isError(error) ? error.message : error);
 }
