@@ -9,10 +9,7 @@
 	"[powershell]": {"files.encoding": "utf8bom"},
 	"[yaml]": {"editor.insertSpaces": true},
 	"rest-client.environmentVariables": {
-		"Development": {
-			"baseUrl": "https://smsapi.free-mobile.fr",
-			"cliendId": "FREEMOBILE_ACCOUNT",
-			"clientSecret": "FREEMOBILE_API_KEY"
-		}
+		"$shared": {"baseUrl": "https://smsapi.free-mobile.fr"},
+		"Development": {"cliendId": "FREEMOBILE_ACCOUNT", "clientSecret": "FREEMOBILE_API_KEY"}
 	}
 }
