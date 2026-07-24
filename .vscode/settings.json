@@ -7,5 +7,12 @@
 	"files.trimTrailingWhitespace": true,
 	"[markdown]": {"files.trimTrailingWhitespace": false},
 	"[powershell]": {"files.encoding": "utf8bom"},
-	"[yaml]": {"editor.insertSpaces": true}
+	"[yaml]": {"editor.insertSpaces": true},
+	"rest-client.environmentVariables": {
+		"Development": {
+			"baseUrl": "https://smsapi.free-mobile.fr",
+			"cliendId": "FREEMOBILE_ACCOUNT",
+			"clientSecret": "FREEMOBILE_API_KEY"
+		}
+	}
 }
