@@ -25,10 +25,12 @@ export class Client {
 	 * Creates a new client.
 	 * @param userName The Free Mobile user name.
 	 * @param password The Free Mobile password.
-	 * @param baseUrl The base URL of the remote API endpoint.
+	 * @param options An object providing values to initialize this instance.
 	 */
-	constructor(userName: string, password: string, baseUrl: string|URL = "https://smsapi.free-mobile.fr") {
+	constructor(userName: string, password: string, options: ClientOptions = {}) {
+		const {baseUrl = "https://smsapi.free-mobile.fr"} = options;
 		const url = baseUrl instanceof URL ? baseUrl.href : baseUrl;
+
 		this.baseUrl = new URL(url.endsWith("/") ? url : `${url}/`);
 		this.#userName = userName;
 		this.#password = password;
@@ -46,3 +48,14 @@ export class Client {
 		if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
 	}
 }
+
+/**
+ * Defines the options of a {@link Client} instance.
+ */
+export type ClientOptions = Partial<{
+
+	/**
+	 * The base URL of the remote API endpoint.
+	 */
+	baseUrl: URL|string;
+}>;

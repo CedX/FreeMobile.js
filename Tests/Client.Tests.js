@@ -9,7 +9,7 @@ import {describe, it} from "node:test";
 describe("Client", () => {
 	describe("sendMessage()", () => {
 		it("should reject if a network error occurred", () =>
-			rejects(new Client("anonymous", "secret", "http://localhost:666").sendMessage("Hello World!")));
+			rejects(new Client("anonymous", "secret", {baseUrl: "http://localhost:666"}).sendMessage("Hello World!")));
 
 		it("should reject if the credentials are invalid", () =>
 			rejects(new Client("anonymous", "secret").sendMessage("Hello World!")));
