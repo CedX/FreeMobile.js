@@ -17,7 +17,7 @@ This will give you an identification key allowing access to the [Free Mobile](ht
 ### Get the library
 Install the latest version of **Free Mobile for JS** with [npm](https://www.npmjs.com) package manager:
 
-```shell
+```powershell
 npm install @cedx/free-mobile
 ```
 
