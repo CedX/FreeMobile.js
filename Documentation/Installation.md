@@ -26,6 +26,6 @@ npm install @cedx/free-mobile
 ### 2. Import it
 Now in your [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) code, you can use:
 
-```js
+```typescript
 import * as free_mobile from "@cedx/free-mobile";
 ```
