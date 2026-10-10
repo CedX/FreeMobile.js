@@ -1,15 +1,10 @@
 import {Client} from "@cedx/free-mobile";
-import {use} from "chai";
-import chaiAsPromised from "chai-as-promised";
-import "chai/register-should.js";
 import {env} from "node:process";
 
 /**
  * Tests the features of the {@link Client} class.
  */
 describe("Client", () => {
-	use(chaiAsPromised);
-
 	context("sendMessage()", () => {
 		it("should reject if a network error occurred", () =>
 			new Client("anonymous", "secret", {baseUrl: "http://localhost:666"}).sendMessage("Hello World!").should.be.rejected);
