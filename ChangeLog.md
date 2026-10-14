@@ -1,5 +1,9 @@
 # Changelog
 
+## Version [2026.10.0](https://github.com/CedX/FreeMobile.js/compare/v16.1.0...v2026.10.0)
+- Breaking change: raised the required [Node.js](https://nodejs.org) version.
+- Switched to a year-based versioning.
+
 ## Version [16.1.0](https://github.com/CedX/FreeMobile.js/compare/v16.0.0...v16.1.0)
 - Ported the source code to [TypeScript](https://www.typescriptlang.org).
 
